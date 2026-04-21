@@ -1,0 +1,10 @@
+LOG_LEVEL: str = 'INFO'
+BOT_NAME: str = 'bmw_co_uk'
+SPIDER_MODULES: list[str] = ['src.crawlers.bmw_co_uk']
+NEWSPIDER_MODULE: str = 'src.crawlers.bmw_co_uk'
+ROBOTSTXT_OBEY: bool = False
+DOWNLOAD_DELAY: float = 0.7
+CONCURRENT_REQUESTS: int = 1
+RETRY_TIMES: int = 3
+RETRY_HTTP_CODES: list[int] = [429, 500, 502, 503, 504]
+ITEM_PIPELINES: dict[str, int] = {'src.crawlers.bmw_co_uk.pipelines.SQLitePipeline': 300}
